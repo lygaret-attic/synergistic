@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ClientTask.h"
 
 @interface ClientViewController : NSObject {
 	IBOutlet NSTextField	*hostnameTextField;
@@ -15,8 +16,7 @@
 	IBOutlet NSTextView		*outputTextArea;
 	IBOutlet NSButton		*startClientButton;
 
-	NSTask *task;
-	NSPipe *pipe;
+	ClientTask *task;
 }
 
 - (IBAction) startStopClient: (id) sender;
