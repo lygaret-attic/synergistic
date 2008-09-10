@@ -14,16 +14,16 @@
 	
 	IBOutlet NSView *clientView;
 	IBOutlet NSView *serverView;
-	IBOutlet NSView *logView;
+	IBOutlet NSView *optionsView;
 	
 	NSSize clientSize;
 	NSSize serverSize;
-	NSSize logSize;
+	NSSize optionsSize;
 }
 
 - (IBAction) switchToClientView: (id) sender;
 - (IBAction) switchToServerView: (id) sender;
-- (IBAction) switchToLogView: (id) sender;
+- (IBAction) switchToOptionsView: (id) sender;
 
 - (void) switchToView: (NSView *) view sized: (NSSize) size animate: (BOOL) animate;
 

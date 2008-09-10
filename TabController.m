@@ -14,7 +14,7 @@
 {
 	clientSize = [clientView frame].size;
 	serverSize = [serverView frame].size;
-	logSize = [logView frame].size;
+	optionsSize = [optionsView frame].size;
 	
 	[self switchToView: clientView sized: clientSize animate: NO];
 }
@@ -29,7 +29,7 @@
 	[tabView selectTabViewItemAtIndex: 1];
 }
 
-- (IBAction) switchToLogView: (id) sender;
+- (IBAction) switchToOptionsView: (id) sender;
 {
 	[tabView selectTabViewItemAtIndex: 2];
 }
@@ -49,8 +49,8 @@
 		size = serverSize;
 	}
 	else {
-		view = logView;
-		size = logSize;
+		view = optionsView;
+		size = optionsSize;
 	}
 	
 	[self switchToView: view sized: size animate: YES];
@@ -60,7 +60,7 @@
 {
 	NSRect aFrame;
 	float newWidth = size.width;
-	float newHeight = size.height + 16; // status bar = 16px
+	float newHeight = size.height + 24; // status bar = 16px
 	
 	aFrame = [window contentRectForFrameRect: [window frame]];
 	aFrame.origin.y += aFrame.size.height;

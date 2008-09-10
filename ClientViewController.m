@@ -35,7 +35,9 @@
 			[args addObject: [aliasNameTextField stringValue]];
 		}
 		
-		[args addObject: [hostnameTextField stringValue]];
+		if ([[hostnameTextField stringValue] length]) {
+			[args addObject: [hostnameTextField stringValue]];
+		}
 		
 		pipe = [[NSPipe alloc] init];
 		task = [[NSTask alloc] init];
