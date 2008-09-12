@@ -2,76 +2,76 @@
 //  TabController.m
 //  Synergistic
 //
-//  Created by siteworx on 9/9/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Synergistic is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Created by Jon Raphaelson on 9/9/08.
+//  Copyright 2008 Jon Raphaelson. All rights reserved.
 //
 
 #import "TabController.h"
+#import "ViewToolbarItem.h"
+
+const int STATUSBAR_HEIGHT = 20;
 
 @implementation TabController
 
+@synthesize currentView;
+
 - (void) awakeFromNib
 {
-	clientSize = [clientView frame].size;
-	serverSize = [serverView frame].size;
-	optionsSize = [optionsView frame].size;
-	
-	[self switchToView: clientView sized: clientSize animate: NO];
+    [self switchToView: initialView sized: [initialView frame].size animate: NO];
 }
 
-- (IBAction) switchToClientView: (id) sender
+- (IBAction) switchView: (ViewToolbarItem *) vti
 {
-	[tabView selectTabViewItemAtIndex: 0];
+    if (currentView != vti.windowView) {
+        [self switchToView: vti.windowView sized: vti.windowViewSize animate: YES];        
+    }
 }
 
-- (IBAction) switchToServerView: (id) sender
+- (void) switchToView: (NSView *) newView sized: (NSSize) size animate: (BOOL) animate
 {
-	[tabView selectTabViewItemAtIndex: 1];
-}
+    NSRect newWindowFrame   = [window frame];
+    NSRect newViewFrame     = [currentView frame];
+    
+    NSRect windowFrame      = [window frame];
+    NSRect contentFrame     = [window contentRectForFrameRect: windowFrame];
+    int toolbarHeight       = windowFrame.size.height - contentFrame.size.height;
+    
+    newViewFrame.origin     = NSMakePoint(0, 0);
+    newViewFrame.size       = size;
+    
+    newWindowFrame.size     = NSMakeSize(size.width, size.height + STATUSBAR_HEIGHT + toolbarHeight);
+    newWindowFrame.origin.x = windowFrame.origin.x;
+    newWindowFrame.origin.y = windowFrame.origin.y + windowFrame.size.height - newWindowFrame.size.height;        
+    
+    // replace the views
+    if (currentView) {
+        [[window contentView] replaceSubview: currentView with: newView];        
+    }
+    else {
+        [[window contentView] addSubview: newView];
+    }
 
-- (IBAction) switchToOptionsView: (id) sender;
-{
-	[tabView selectTabViewItemAtIndex: 2];
-}
-
-- (void) tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
-{
-	NSString *id = [tabViewItem identifier];
-	NSView *view;
-	NSSize size;
-	
-	if ([id isEqualToString: @"client"]) {
-		view = clientView;
-		size = clientSize;
-	}
-	else if ([id isEqualToString: @"server"]) {
-		view = serverView;
-		size = serverSize;
-	}
-	else {
-		view = optionsView;
-		size = optionsSize;
-	}
-	
-	[self switchToView: view sized: size animate: YES];
-}
-
-- (void) switchToView: (NSView *) view sized: (NSSize) size animate: (BOOL) animate
-{
-	NSRect aFrame;
-	float newWidth = size.width;
-	float newHeight = size.height + 24; // status bar = 16px
-	
-	aFrame = [window contentRectForFrameRect: [window frame]];
-	aFrame.origin.y += aFrame.size.height;
-	aFrame.origin.y -= newHeight;
-	aFrame.size.height = newHeight;
-	aFrame.size.width = newWidth;
-
-	aFrame = [window frameRectForContentRect: aFrame];
-	
-	[[tabView selectedTabViewItem] setView: view];
-	[window setFrame: aFrame display: YES animate: animate];
+    // save our copy of the view
+    currentView = [newView retain];    
+    
+    [[currentView superview] setNeedsDisplayInRect: newViewFrame];
+    [currentView setFrame: newViewFrame];
+    [currentView setNeedsDisplay: YES];
+    
+    [window setFrame: newWindowFrame display: YES animate: animate];        
 }
 
 @end

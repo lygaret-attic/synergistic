@@ -11,6 +11,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DCB66CE90E7889C800C2A690 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = DCB66CE80E7889C800C2A690 /* COPYING */; };
+		DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */; };
 		DCD69F1C0E782AD800BA3984 /* BackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F1B0E782AD800BA3984 /* BackgroundTask.m */; };
 		DCD69F210E78303500BA3984 /* BackgroundTaskGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F200E78303500BA3984 /* BackgroundTaskGlobals.m */; };
 		DCD69F2B0E78338E00BA3984 /* ClientTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F2A0E78338E00BA3984 /* ClientTask.m */; };
@@ -45,6 +47,9 @@
 		32CA4F630368D1EE00C91783 /* Synergistic_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synergistic_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Synergistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synergistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB66CE80E7889C800C2A690 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		DCB66D2E0E788B6800C2A690 /* ViewToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToolbarItem.h; sourceTree = "<group>"; };
+		DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewToolbarItem.m; sourceTree = "<group>"; };
 		DCD69F1A0E782AD800BA3984 /* BackgroundTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundTask.h; sourceTree = "<group>"; };
 		DCD69F1B0E782AD800BA3984 /* BackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTask.m; sourceTree = "<group>"; };
 		DCD69F200E78303500BA3984 /* BackgroundTaskGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskGlobals.m; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				DCB66CE80E7889C800C2A690 /* COPYING */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -144,6 +150,17 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB66D310E788C8A00C2A690 /* ToolbarTabbedWindow */ = {
+			isa = PBXGroup;
+			children = (
+				DCB66D2E0E788B6800C2A690 /* ViewToolbarItem.h */,
+				DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */,
+				DCFDBBD40E770D2000A94BAC /* TabController.h */,
+				DCFDBBD50E770D2000A94BAC /* TabController.m */,
+			);
+			name = ToolbarTabbedWindow;
 			sourceTree = "<group>";
 		};
 		DCD69F1D0E782CAB00BA3984 /* Task */ = {
@@ -161,8 +178,7 @@
 		DCFDBC880E7738EA00A94BAC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DCFDBBD40E770D2000A94BAC /* TabController.h */,
-				DCFDBBD50E770D2000A94BAC /* TabController.m */,
+				DCB66D310E788C8A00C2A690 /* ToolbarTabbedWindow */,
 				DCFDBCA40E773CEB00A94BAC /* ClientViewController.h */,
 				DCFDBCA50E773CEB00A94BAC /* ClientViewController.m */,
 			);
@@ -224,6 +240,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				DCB66CE90E7889C800C2A690 /* COPYING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +257,7 @@
 				DCD69F1C0E782AD800BA3984 /* BackgroundTask.m in Sources */,
 				DCD69F210E78303500BA3984 /* BackgroundTaskGlobals.m in Sources */,
 				DCD69F2B0E78338E00BA3984 /* ClientTask.m in Sources */,
+				DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

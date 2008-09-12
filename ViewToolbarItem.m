@@ -1,5 +1,5 @@
 //
-//  BackgroundTask.h
+//  ViewToolbarItem.m
 //  Synergistic
 //
 //  Synergistic is free software: you can redistribute it and/or modify
@@ -16,29 +16,18 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 //  Created by Jon Raphaelson on 9/10/08.
-//  Copyright 2008 Jon Raphaelson. All rights reserved.
+//  Copyright Jon Raphaelson 2008. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "ViewToolbarItem.h"
 
-APPKIT_EXTERN NSString *BTTaskStartedNotification;
-APPKIT_EXTERN NSString *BTTaskTerminatedNotification;
-APPKIT_EXTERN NSString *BTTaskHasOutputNotification;
-APPKIT_EXTERN NSString *BTTaskHasOutputDataItem;
+@implementation ViewToolbarItem
 
-@interface BackgroundTask : NSObject {
-	NSString *name;
-	NSTask *task;
-	NSPipe *pipe;
+@synthesize windowView, windowViewSize;
+
+- (void) awakeFromNib
+{
+    windowViewSize = [windowView frame].size;
 }
-
-- (id) initWithName: (NSString *) name;
-
-- (bool) isRunning;
-- (void) startTask;
-- (void) stopTask;
-
-- (NSString *) launchPath;
-- (NSArray *) launchArgs;
 
 @end
