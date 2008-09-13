@@ -11,6 +11,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DC69A6320E7AF53300660B7D /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6310E7AF53300660B7D /* Screen.m */; };
+		DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6340E7AF7C600660B7D /* Configuration.m */; };
+		DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6860E7AFCB700660B7D /* ServerViewController.m */; };
 		DCB66CE90E7889C800C2A690 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = DCB66CE80E7889C800C2A690 /* COPYING */; };
 		DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */; };
 		DCD69F1C0E782AD800BA3984 /* BackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F1B0E782AD800BA3984 /* BackgroundTask.m */; };
@@ -47,6 +50,12 @@
 		32CA4F630368D1EE00C91783 /* Synergistic_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synergistic_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Synergistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synergistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC69A6300E7AF53300660B7D /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		DC69A6310E7AF53300660B7D /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screen.m; sourceTree = "<group>"; };
+		DC69A6330E7AF7C600660B7D /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		DC69A6340E7AF7C600660B7D /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		DC69A6850E7AFCB700660B7D /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
+		DC69A6860E7AFCB700660B7D /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
 		DCB66CE80E7889C800C2A690 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		DCB66D2E0E788B6800C2A690 /* ViewToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToolbarItem.h; sourceTree = "<group>"; };
 		DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewToolbarItem.m; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DC69A62F0E7AF52200660B7D /* Models */,
 				DCD69F1D0E782CAB00BA3984 /* Task */,
 				DCFDBC880E7738EA00A94BAC /* UI */,
 			);
@@ -152,6 +162,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC69A62F0E7AF52200660B7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC69A6300E7AF53300660B7D /* Screen.h */,
+				DC69A6310E7AF53300660B7D /* Screen.m */,
+				DC69A6330E7AF7C600660B7D /* Configuration.h */,
+				DC69A6340E7AF7C600660B7D /* Configuration.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		DCB66D310E788C8A00C2A690 /* ToolbarTabbedWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +202,8 @@
 				DCB66D310E788C8A00C2A690 /* ToolbarTabbedWindow */,
 				DCFDBCA40E773CEB00A94BAC /* ClientViewController.h */,
 				DCFDBCA50E773CEB00A94BAC /* ClientViewController.m */,
+				DC69A6850E7AFCB700660B7D /* ServerViewController.h */,
+				DC69A6860E7AFCB700660B7D /* ServerViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -258,6 +281,9 @@
 				DCD69F210E78303500BA3984 /* BackgroundTaskGlobals.m in Sources */,
 				DCD69F2B0E78338E00BA3984 /* ClientTask.m in Sources */,
 				DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */,
+				DC69A6320E7AF53300660B7D /* Screen.m in Sources */,
+				DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */,
+				DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
