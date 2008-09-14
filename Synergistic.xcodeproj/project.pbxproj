@@ -19,6 +19,7 @@
 		DCD69F1C0E782AD800BA3984 /* BackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F1B0E782AD800BA3984 /* BackgroundTask.m */; };
 		DCD69F210E78303500BA3984 /* BackgroundTaskGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F200E78303500BA3984 /* BackgroundTaskGlobals.m */; };
 		DCD69F2B0E78338E00BA3984 /* ClientTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F2A0E78338E00BA3984 /* ClientTask.m */; };
+		DCF0AAD60E7CB404009CD224 /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF0AAD50E7CB404009CD224 /* Link.m */; };
 		DCFDBBD60E770D2000A94BAC /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFDBBD50E770D2000A94BAC /* TabController.m */; };
 		DCFDBC9B0E7739E400A94BAC /* synergyc in CopyFiles */ = {isa = PBXBuildFile; fileRef = DCFDBC960E7739CD00A94BAC /* synergyc */; };
 		DCFDBC9C0E7739E400A94BAC /* synergys in CopyFiles */ = {isa = PBXBuildFile; fileRef = DCFDBC970E7739CD00A94BAC /* synergys */; };
@@ -64,6 +65,8 @@
 		DCD69F200E78303500BA3984 /* BackgroundTaskGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskGlobals.m; sourceTree = "<group>"; };
 		DCD69F290E78338E00BA3984 /* ClientTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientTask.h; sourceTree = "<group>"; };
 		DCD69F2A0E78338E00BA3984 /* ClientTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientTask.m; sourceTree = "<group>"; };
+		DCF0AAD40E7CB404009CD224 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		DCF0AAD50E7CB404009CD224 /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
 		DCFDBBD40E770D2000A94BAC /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
 		DCFDBBD50E770D2000A94BAC /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
 		DCFDBC960E7739CD00A94BAC /* synergyc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = synergyc; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				DC69A6310E7AF53300660B7D /* Screen.m */,
 				DC69A6330E7AF7C600660B7D /* Configuration.h */,
 				DC69A6340E7AF7C600660B7D /* Configuration.m */,
+				DCF0AAD40E7CB404009CD224 /* Link.h */,
+				DCF0AAD50E7CB404009CD224 /* Link.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				DC69A6320E7AF53300660B7D /* Screen.m in Sources */,
 				DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */,
 				DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */,
+				DCF0AAD60E7CB404009CD224 /* Link.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

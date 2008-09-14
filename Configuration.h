@@ -23,11 +23,14 @@
 
 @interface Configuration : NSObject {
     NSMutableArray *screens;
+    NSMutableArray *links;
 }
 
 @property(retain) NSMutableArray *screens;
+@property(retain) NSMutableArray *links;
 
 + (Configuration *) sampleConfiguration;
-- (id) initWithScreens: (NSArray *) newScreens;
+
+- (id) initWithScreens: (NSArray *) newScreens andLinks: (NSArray *) newLinks;
 
 @end

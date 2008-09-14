@@ -21,35 +21,49 @@
 
 #import "Configuration.h"
 #import "Screen.h"
+#import "Link.h"
 
 @implementation Configuration
-@synthesize screens;
+@synthesize screens, links;
 
 + (Configuration *) sampleConfiguration
 {
-    NSMutableArray *screens = [NSMutableArray array];
-    [screens addObject: [[[Screen alloc] initWithName: @"wintop" andAliases: @"win", @"jonwintop", @"JonWINTOP.swxrochester.com", nil] retain]];
-    [screens addObject: [[[Screen alloc] initWithName: @"mactop" andAliases: @"mac", @"styx", @"Styx.local", @"Styx.swxrochester.com", nil] retain]];
-     
-    Configuration *config = [[Configuration alloc] initWithScreens: screens];
+    Screen *win = [[Screen alloc] initWithName: @"wintop" andAliases: @"win", @"jonwintop", @"JonWINTOP.swxrochester.com", nil];
+    Screen *mac = [[Screen alloc] initWithName: @"mactop" andAliases: @"mac", @"styx", @"Styx.local", @"Styx.swxrochester.com", nil];    
+
+    NSMutableArray *screens = [NSMutableArray arrayWithObjects: mac, win, nil];
+
+    NSMutableArray *links = [NSMutableArray array];
+    [links addObject: [[Link alloc] initWithParent: mac Child: win inDirection: Left]];
+    [links addObject:[[Link alloc] initWithParent: win Child: mac inDirection: Right]];
     
+    Configuration *config = [[Configuration alloc] initWithScreens: screens andLinks: links];    
     return config;
 }
+
+/*
++ (Configuration *) configurationFromFileNamed: (NSString *path)
+{
+    
+}
+*/
 
 - (id) init
 {
     if (self = [super init])
     {
-        screens = [[NSMutableArray array] retain];
+        screens = [[NSMutableArray alloc] init];
+        links   = [[NSMutableArray alloc] init];
     }
     
     return self;
 }
 
-- (id) initWithScreens: (NSArray *) newScreens
+- (id) initWithScreens: (NSArray *) newScreens andLinks: (NSArray *) newLinks
 {
     if (self = [super init]) {
         screens = [[NSMutableArray arrayWithArray: newScreens] retain];
+        links   = [[NSMutableArray arrayWithArray: newLinks] retain];
     }
     
     return self;
@@ -58,6 +72,7 @@
 - (void) dealloc
 {
     [screens release];
+    [links release];
     [super dealloc];
 }
 

@@ -271,13 +271,14 @@
 								<string>DC69A62F0E7AF52200660B7D</string>
 								<string>DCFDBC880E7738EA00A94BAC</string>
 								<string>DCB66D310E788C8A00C2A690</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1CC0EA4004350EF90041110B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>7</integer>
 									<integer>3</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -319,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>DCB66CC30E78889C00C2A690</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Screen.m</string>
+								<string>Configuration.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,18 +328,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>DCB66CC40E78889C00C2A690</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Screen.m</string>
+										<string>Configuration.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DCF0AAC20E7C695B009CD224</string>
+										<string>DCF0AAF70E7CBB02009CD224</string>
 										<key>history</key>
 										<array>
 											<string>DCB66CEE0E788A7200C2A690</string>
 											<string>DCB66CF00E788A7200C2A690</string>
 											<string>DCB66CF30E788A7200C2A690</string>
 											<string>DCB66CF40E788A7200C2A690</string>
-											<string>DCB66CF50E788A7200C2A690</string>
 											<string>DCB66CF60E788A7200C2A690</string>
 											<string>DCB66CF80E788A7200C2A690</string>
 											<string>DCB66CF90E788A7200C2A690</string>
@@ -353,10 +353,13 @@
 											<string>DCC001470E7B049E0019EAE3</string>
 											<string>DCC001480E7B049E0019EAE3</string>
 											<string>DCF0AAA50E7C67C0009CD224</string>
-											<string>DCF0AAA70E7C67C0009CD224</string>
-											<string>DCF0AAB80E7C6819009CD224</string>
 											<string>DCF0AAB90E7C6819009CD224</string>
-											<string>DCF0AABA0E7C6819009CD224</string>
+											<string>DCF0AADC0E7CB844009CD224</string>
+											<string>DCF0AADD0E7CB844009CD224</string>
+											<string>DCF0AADF0E7CB844009CD224</string>
+											<string>DCF0AAF20E7CBB02009CD224</string>
+											<string>DCF0AAF30E7CBB02009CD224</string>
+											<string>DCF0AAF40E7CBB02009CD224</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -402,6 +405,20 @@
 											<string>DCF0AAAA0E7C67C0009CD224</string>
 											<string>DCF0AABB0E7C6819009CD224</string>
 											<string>DCF0AABC0E7C6819009CD224</string>
+											<string>DCF0AAE10E7CB844009CD224</string>
+											<string>DCF0AAE20E7CB844009CD224</string>
+											<string>DCF0AAE30E7CB844009CD224</string>
+											<string>DCF0AAE40E7CB844009CD224</string>
+											<string>DCF0AAE50E7CB844009CD224</string>
+											<string>DCF0AAE60E7CB844009CD224</string>
+											<string>DCF0AAE70E7CB844009CD224</string>
+											<string>DCF0AAE80E7CB844009CD224</string>
+											<string>DCF0AAE90E7CB844009CD224</string>
+											<string>DCF0AAEA0E7CB844009CD224</string>
+											<string>DCF0AAEB0E7CB844009CD224</string>
+											<string>DCF0AAEC0E7CB844009CD224</string>
+											<string>DCF0AAF50E7CBB02009CD224</string>
+											<string>DCF0AAF60E7CBB02009CD224</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -441,8 +458,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {874, 205}}</string>
-										<key>RubberWindowFrame</key>
-										<string>78 126 1133 642 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -497,6 +512,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {874, 205}}</string>
+										<key>RubberWindowFrame</key>
+										<string>78 126 1133 642 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -1249,7 +1266,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
