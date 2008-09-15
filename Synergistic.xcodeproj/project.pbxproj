@@ -14,12 +14,18 @@
 		DC69A6320E7AF53300660B7D /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6310E7AF53300660B7D /* Screen.m */; };
 		DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6340E7AF7C600660B7D /* Configuration.m */; };
 		DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6860E7AFCB700660B7D /* ServerViewController.m */; };
+		DCAFD2040E7E0C7E00316004 /* screen_box.icns in Resources */ = {isa = PBXBuildFile; fileRef = DCAFD2030E7E0C7E00316004 /* screen_box.icns */; };
 		DCB66CE90E7889C800C2A690 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = DCB66CE80E7889C800C2A690 /* COPYING */; };
 		DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */; };
 		DCD69F1C0E782AD800BA3984 /* BackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F1B0E782AD800BA3984 /* BackgroundTask.m */; };
 		DCD69F210E78303500BA3984 /* BackgroundTaskGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F200E78303500BA3984 /* BackgroundTaskGlobals.m */; };
 		DCD69F2B0E78338E00BA3984 /* ClientTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD69F2A0E78338E00BA3984 /* ClientTask.m */; };
 		DCF0AAD60E7CB404009CD224 /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF0AAD50E7CB404009CD224 /* Link.m */; };
+		DCF0AAFB0E7CBBED009CD224 /* ConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF0AAFA0E7CBBED009CD224 /* ConfigView.m */; };
+		DCF0AB260E7CE612009CD224 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF0AB250E7CE612009CD224 /* QuartzCore.framework */; };
+		DCF0AB890E7D74CA009CD224 /* NSImage-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF0AB880E7D74CA009CD224 /* NSImage-Extras.m */; };
+		DCF0AB8B0E7D74F0009CD224 /* TheoCacaoLicense.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCF0AB8A0E7D74F0009CD224 /* TheoCacaoLicense.txt */; };
+		DCF0AB8D0E7D756F009CD224 /* screen.icns in Resources */ = {isa = PBXBuildFile; fileRef = DCF0AB8C0E7D756F009CD224 /* screen.icns */; };
 		DCFDBBD60E770D2000A94BAC /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFDBBD50E770D2000A94BAC /* TabController.m */; };
 		DCFDBC9B0E7739E400A94BAC /* synergyc in CopyFiles */ = {isa = PBXBuildFile; fileRef = DCFDBC960E7739CD00A94BAC /* synergyc */; };
 		DCFDBC9C0E7739E400A94BAC /* synergys in CopyFiles */ = {isa = PBXBuildFile; fileRef = DCFDBC970E7739CD00A94BAC /* synergys */; };
@@ -57,6 +63,7 @@
 		DC69A6340E7AF7C600660B7D /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		DC69A6850E7AFCB700660B7D /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
 		DC69A6860E7AFCB700660B7D /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
+		DCAFD2030E7E0C7E00316004 /* screen_box.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen_box.icns; sourceTree = "<group>"; };
 		DCB66CE80E7889C800C2A690 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		DCB66D2E0E788B6800C2A690 /* ViewToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToolbarItem.h; sourceTree = "<group>"; };
 		DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewToolbarItem.m; sourceTree = "<group>"; };
@@ -67,6 +74,13 @@
 		DCD69F2A0E78338E00BA3984 /* ClientTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientTask.m; sourceTree = "<group>"; };
 		DCF0AAD40E7CB404009CD224 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		DCF0AAD50E7CB404009CD224 /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		DCF0AAF90E7CBBED009CD224 /* ConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigView.h; sourceTree = "<group>"; };
+		DCF0AAFA0E7CBBED009CD224 /* ConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigView.m; sourceTree = "<group>"; };
+		DCF0AB250E7CE612009CD224 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		DCF0AB870E7D74CA009CD224 /* NSImage-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage-Extras.h"; sourceTree = "<group>"; };
+		DCF0AB880E7D74CA009CD224 /* NSImage-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage-Extras.m"; sourceTree = "<group>"; };
+		DCF0AB8A0E7D74F0009CD224 /* TheoCacaoLicense.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TheoCacaoLicense.txt; path = ../../Downloads/NanoLife/TheoCacaoLicense.txt; sourceTree = SOURCE_ROOT; };
+		DCF0AB8C0E7D756F009CD224 /* screen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen.icns; sourceTree = "<group>"; };
 		DCFDBBD40E770D2000A94BAC /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
 		DCFDBBD50E770D2000A94BAC /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
 		DCFDBC960E7739CD00A94BAC /* synergyc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = synergyc; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				DCF0AB260E7CE612009CD224 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +105,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DCF0AB7D0E7D7487009CD224 /* Util */,
+				DCF0AB8A0E7D74F0009CD224 /* TheoCacaoLicense.txt */,
+				DCF0AB870E7D74CA009CD224 /* NSImage-Extras.h */,
+				DCF0AB880E7D74CA009CD224 /* NSImage-Extras.m */,
 				DC69A62F0E7AF52200660B7D /* Models */,
 				DCD69F1D0E782CAB00BA3984 /* Task */,
 				DCFDBC880E7738EA00A94BAC /* UI */,
@@ -100,6 +119,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCF0AB250E7CE612009CD224 /* QuartzCore.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -148,6 +168,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DCAFD2030E7E0C7E00316004 /* screen_box.icns */,
+				DCF0AB8C0E7D756F009CD224 /* screen.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -201,9 +223,26 @@
 			name = Task;
 			sourceTree = "<group>";
 		};
+		DCF0AAF80E7CBBDB009CD224 /* Configuration View */ = {
+			isa = PBXGroup;
+			children = (
+				DCF0AAF90E7CBBED009CD224 /* ConfigView.h */,
+				DCF0AAFA0E7CBBED009CD224 /* ConfigView.m */,
+			);
+			name = "Configuration View";
+			sourceTree = "<group>";
+		};
+		DCF0AB7D0E7D7487009CD224 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		DCFDBC880E7738EA00A94BAC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DCF0AAF80E7CBBDB009CD224 /* Configuration View */,
 				DCB66D310E788C8A00C2A690 /* ToolbarTabbedWindow */,
 				DCFDBCA40E773CEB00A94BAC /* ClientViewController.h */,
 				DCFDBCA50E773CEB00A94BAC /* ClientViewController.m */,
@@ -269,6 +308,9 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				DCB66CE90E7889C800C2A690 /* COPYING in Resources */,
+				DCF0AB8B0E7D74F0009CD224 /* TheoCacaoLicense.txt in Resources */,
+				DCF0AB8D0E7D756F009CD224 /* screen.icns in Resources */,
+				DCAFD2040E7E0C7E00316004 /* screen_box.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +332,8 @@
 				DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */,
 				DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */,
 				DCF0AAD60E7CB404009CD224 /* Link.m in Sources */,
+				DCF0AAFB0E7CBBED009CD224 /* ConfigView.m in Sources */,
+				DCF0AB890E7D74CA009CD224 /* NSImage-Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
