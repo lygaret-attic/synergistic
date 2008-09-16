@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -319,8 +321,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -718,14 +718,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>DC31724F0E7F59EA00EAD590</string>
+				<string>DCC573C30E7F70870077301A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>DC3172500E7F59EA00EAD590</string>
-				<string>DC3172510E7F59EA00EAD590</string>
-				<string>DC3172520E7F59EA00EAD590</string>
-				<string>DC3172530E7F59EA00EAD590</string>
-				<string>DC3172540E7F59EA00EAD590</string>
+				<string>DCC573C40E7F70870077301A</string>
+				<string>DCC573C50E7F70870077301A</string>
+				<string>DCC573C60E7F70870077301A</string>
+				<string>DCC573C70E7F70870077301A</string>
+				<string>DCC573C80E7F70870077301A</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
