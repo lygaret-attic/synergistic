@@ -11,13 +11,14 @@
 
 #import "NSImage-Extras.h";
 #import "Screen.h";
-#import "Link.h";
 
 @interface ConfigView : NSView 
 {
     NSGradient *backgroundGradient;
     CGImageRef screenImage;
     CGImageRef boxImage;
+    
+    CALayer *textLayer;
 }
 
 @property(retain) NSGradient *backgroundGradient;
@@ -26,5 +27,13 @@
 - (void) addFirstScreen: (Screen *) screen;
 - (void) addScreen: (Screen *) screen toThe: (LinkDirection) direction Of: (NSString *) layerName;
 - (void) addBoxToThe: (LinkDirection) direction Of: (NSString *) layerName;
+
+@end
+
+// CVLayerGen.m
+@interface ConfigView (LayerGen)
+    
+- (CALayer *) makeLayerForScreen: (Screen *) screen;
+- (CALayer *) boxLayer;
 
 @end

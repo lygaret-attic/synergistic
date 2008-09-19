@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef enum { Left, Right, Above, Below } LinkDirection;
-
 @class Screen;
 
 @interface Link : NSObject {

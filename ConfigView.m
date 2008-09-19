@@ -30,40 +30,72 @@
     self.layer.layoutManager = [CAConstraintLayoutManager layoutManager];
     
     NSString *screenFile = [[NSBundle mainBundle] pathForImageResource: @"screen"];
-    screenImage = [[[NSImage alloc] initWithContentsOfFile: screenFile] cgImage];
+    screenImage = [[[[[NSImage alloc] initWithContentsOfFile: screenFile] representations] objectAtIndex: 1] CGImage];
 
     NSString *boxFile = [[NSBundle mainBundle] pathForImageResource: @"screen_box"];
     boxImage = [[[NSImage alloc] initWithContentsOfFile: boxFile] cgImage];
 
-    [self addFirstScreen: nil];
+    Configuration *config = [Configuration sampleConfiguration];
+    Screen *s = [[config getScreens] objectAtIndex: 0];
     
-/*    Configuration *config = [Configuration sampleConfiguration];
+    CALayer *screenLayer = [self makeLayerForScreen: s];
+    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX]];
+    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY]];
+    [self.layer addSublayer: screenLayer];
+
+    screenLayer = [self makeLayerForScreen: [[config getScreens] objectAtIndex: 1]];
+    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"mactop" attribute: kCAConstraintMidX]];
+    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMaxY relativeTo: @"mactop" attribute: kCAConstraintMinY offset: -10.0]];
+    [self.layer addSublayer: screenLayer];
+    //    [self addFirstScreen: nil];
+    
+/*    ;
     for (Screen *screen in config.screens)
     {
         [self addScreen: screen toThe: Left Of: @"first"];
     }
 */    
     // TODO: Fix this!
-    [self addFirstScreen: nil];
-    [self addScreen: nil toThe: Left Of: @"first"];
-    [self addScreen: nil toThe: Below Of: @"first"];
-    [self addBoxToThe: Above Of: @"first"];
-    [self addBoxToThe: Right Of: @"first"];
+    // [self addFirstScreen: nil];
+//    [self addScreen: nil toThe: Left Of: @"first"];
+//    [self addScreen: nil toThe: Below Of: @"first"];
+//    [self addBoxToThe: Above Of: @"first"];
+//    [self addBoxToThe: Right Of: @"first"];
 }
 
 - (void) addFirstScreen: (Screen *) screen
 {
-    CATextLayer *screenLayer = [[CATextLayer layer] retain];
-    screenLayer.bounds = CGRectMake(0, 0, 64, 64);
-    screenLayer.delegate = self;
-    //screenLayer.contents = (id) screenImage;
-    screenLayer.string = @"Hello!";
-    screenLayer.name = @"first";
+    CALayer *layer = [CALayer layer];
+    layer.delegate = self;
+
+    CALayer *image = [CALayer layer];
+    image.bounds = CGRectMake(0, 0, 48, 48);
+    image.contents = (id)screenImage;
+    image.name = @"image";
     
-    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX]];
-    [screenLayer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY]];
-        
-    [self.layer addSublayer: screenLayer];
+    CATextLayer *text = [CATextLayer layer];
+    text.string = @"mactop";
+    text.foregroundColor = CGColorCreateGenericRGB(0.2, 0.2, 0.2, 0.8);
+    text.fontSize = 11.0;
+    text.font = CGFontCreateWithFontName((CFStringRef) @"Lucida Grande");
+    text.name = @"text";
+    
+    textLayer = text;
+    
+    [image addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX]];
+    [image addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY]];
+    
+    [text addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"image" attribute: kCAConstraintMidX]];
+    [text addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMaxY relativeTo: @"image" attribute: kCAConstraintMinY]];
+    
+    [layer addSublayer: image];
+    [layer addSublayer: text];
+
+    [layer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX]];
+    [layer addConstraint: [CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY]];
+    
+    [self.layer addSublayer: layer];
+    
     [self.layer setNeedsDisplay];
 }
 
@@ -136,6 +168,8 @@
 - (void)drawRect:(NSRect)rect {
     [self.backgroundGradient drawInRect: [self bounds] angle: 90.0];
     
+    NSLog(@"textlayer bounds: %@", NSStringFromRect(NSRectFromCGRect(textLayer.bounds)));
+    
     [[NSColor darkGrayColor] setFill];
     NSFrameRect(self.bounds);
 }
@@ -144,13 +178,13 @@
 
 - (void) initBackgroundGradient
 {
-    CGFloat red1   =  210.0 / 255.0;
-    CGFloat green1 =  210.0 / 255.0;
-    CGFloat blue1  =  210.0 / 255.0;
+    CGFloat red1   =  10.0 / 255.0;
+    CGFloat green1 =  10.0 / 255.0;
+    CGFloat blue1  =  10.0 / 255.0;
     
-    CGFloat red2   =  225.0 / 255.0;
-    CGFloat green2 =  225.0 / 255.0;
-    CGFloat blue2  =  255.0 / 255.0;
+    CGFloat red2   =  45.0 / 255.0;
+    CGFloat green2 =  45.0 / 255.0;
+    CGFloat blue2  =  45.0 / 255.0;
     
     NSColor* gradientTop    = [NSColor colorWithCalibratedRed:red1 green:green1 blue:blue1 alpha:1.0];    
     NSColor* gradientBottom = [NSColor colorWithCalibratedRed:red2 green:green2 blue:blue2 alpha:1.0];

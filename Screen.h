@@ -21,14 +21,38 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef enum { Left, Right, Above, Below } LinkDirection;
+
+APPKIT_EXTERN NSString *LinkLeft;
+APPKIT_EXTERN NSString *LinkRight;
+APPKIT_EXTERN NSString *LinkAbove;
+APPKIT_EXTERN NSString *LinkBelow;
+APPKIT_EXTERN NSString *LinkKeyFromEnum(LinkDirection dir);
+APPKIT_EXTERN LinkDirection LinkInOppositeDirection(LinkDirection dir);
+
 @interface Screen : NSObject {
     NSString *name;
-    NSMutableArray *aliases;
+
+@private
+    NSMutableSet *aliases;
+    
+    // the keys are directions, the values are other screens
+    // if a key does not exist, there is no link in that direction
+    NSMutableDictionary *links;
 }
 
 @property(retain) NSString *name;
-@property(retain) NSMutableArray *aliases;
+@property(readonly) NSSet *aliases;
+@property(readonly) NSDictionary *links;
 
-- (id) initWithName: (NSString *) newName andAliases: (NSString *) firstAlias, ...;
+- (id) initWithName: (NSString *) name;
+
+- (void) addAlias: (NSString *) alias;
+- (void) removeAlias: (NSString *) alias;
+
+- (void) addLinkToScreen: (Screen *) screen inDirection: (LinkDirection) direction;
+- (void) removeLinkInDirection: (LinkDirection) direction;
+
+- (Screen *) getScreenInDirection: (LinkDirection) direction;
 
 @end

@@ -20,17 +20,27 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Screen.h"
 
 @interface Configuration : NSObject {
-    NSMutableArray *screens;
-    NSMutableArray *links;
+    NSMutableDictionary *screens;
 }
 
-@property(retain) NSMutableArray *screens;
-@property(retain) NSMutableArray *links;
+- (id) initWithContentsOfFile: (NSString *) pathName;
+- (id) initWithScreens: (NSArray *) newScreens;
+
+- (void) addScreen: (Screen *) screen;
+- (NSArray *) getScreens;
+
+- (void) removeScreen: (Screen *) screen;
+- (void) removeScreenNamed: (NSString *) name;
+
+@end
+
+
+// temporary - this won't exist in release
+@interface Configuration (TemporaryBootstrapping)
 
 + (Configuration *) sampleConfiguration;
-
-- (id) initWithScreens: (NSArray *) newScreens andLinks: (NSArray *) newLinks;
 
 @end

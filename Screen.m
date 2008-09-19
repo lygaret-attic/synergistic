@@ -22,38 +22,14 @@
 #import "Screen.h"
 
 @implementation Screen
-@synthesize name, aliases;
+@synthesize name, aliases, links;
 
-- (id) initWithName: (NSString *) newName andAliases: (NSString *) firstAlias, ...
-{
-    if (self = [super init])
-    {
-        name = newName;
-        aliases = [[NSMutableArray alloc] init];
-        
-        {
-            id each;
-            va_list aliasList;
-         
-            if (firstAlias) {
-                [aliases addObject: firstAlias];
-
-                va_start(aliasList, firstAlias);
-                while (each = va_arg(aliasList, id))
-                    [aliases addObject: each];
-                va_end(aliasList);
-            }            
-        }
-    }
-
-    return self;
-}
-
-- (id) init
+- (id) initWithName: (NSString *) _name
 {
     if (self = [super init]) {
-        name = nil;
-        aliases = [[NSMutableArray alloc] init];
+        name = [_name retain];
+        aliases = [[NSMutableSet alloc] init];
+        links = [[NSMutableDictionary alloc] initWithCapacity: 4];
     }
     
     return self;
@@ -63,7 +39,53 @@
 {
     [name release];
     [aliases release];
+    [links release];
     [super dealloc];
+}
+
+#pragma mark LinkTree methods (data getters, setters)
+
+- (void) addAlias: (NSString *) alias
+{
+    [aliases addObject: alias];
+}
+
+- (void) addAliases: (NSString *) first, ...
+{
+    id each;
+    va_list aliasList;
+    
+    [aliases addObject: first];
+    va_start(aliasList, first);
+        while (each = va_arg(aliasList, id))
+            [aliases addObject: each];
+    va_end(aliasList);
+}
+
+- (void) removeAlias: (NSString *) alias
+{
+    [aliases removeObject: alias];
+}
+
+- (void) addLinkToScreen: (Screen *) screen inDirection: (LinkDirection) direction
+{
+    [links setObject: screen forKey: LinkKeyFromEnum(direction)];
+}
+
+- (void) addBiDirectionalLinkToScreen: (Screen *) screen inDirection: (LinkDirection) direction
+{
+    [self addLinkToScreen: screen inDirection: direction];
+    [screen addLinkToScreen: self inDirection: LinkInOppositeDirection(direction)];
+}
+
+- (void) removeLinkInDirection: (LinkDirection) direction
+{
+    [links removeObjectForKey: LinkKeyFromEnum(direction)];
+}
+
+- (Screen *) getScreenInDirection: (LinkDirection) direction
+{
+    return [links objectForKey: LinkKeyFromEnum(direction)];
 }
 
 @end

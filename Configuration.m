@@ -24,55 +24,59 @@
 #import "Link.h"
 
 @implementation Configuration
-@synthesize screens, links;
-
-+ (Configuration *) sampleConfiguration
-{
-    Screen *win = [[Screen alloc] initWithName: @"wintop" andAliases: @"win", @"jonwintop", @"JonWINTOP.swxrochester.com", nil];
-    Screen *mac = [[Screen alloc] initWithName: @"mactop" andAliases: @"mac", @"styx", @"Styx.local", @"Styx.swxrochester.com", nil];    
-
-    NSMutableArray *screens = [NSMutableArray arrayWithObjects: mac, win, nil];
-
-    NSMutableArray *links = [NSMutableArray array];
-    [links addObject: [[Link alloc] initWithParent: mac Child: win inDirection: Left]];
-    [links addObject:[[Link alloc] initWithParent: win Child: mac inDirection: Right]];
-    
-    Configuration *config = [[Configuration alloc] initWithScreens: screens andLinks: links];    
-    return config;
-}
-
-/*
-+ (Configuration *) configurationFromFileNamed: (NSString *path)
-{
-    
-}
-*/
 
 - (id) init
 {
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         screens = [[NSMutableArray alloc] init];
-        links   = [[NSMutableArray alloc] init];
     }
     
     return self;
 }
 
-- (id) initWithScreens: (NSArray *) newScreens andLinks: (NSArray *) newLinks
+- (id) initWithContentsOfFile: (NSString *) filename;
+{
+    // TODO
+    [[NSException exceptionWithName: @"Not Implemented" reason: @"Not yet implemented." userInfo: nil] raise];
+    return self;
+}
+
+- (id) initWithScreens: (NSArray *) newScreens
 {
     if (self = [super init]) {
-        screens = [[NSMutableArray arrayWithArray: newScreens] retain];
-        links   = [[NSMutableArray arrayWithArray: newLinks] retain];
+        screens = [[NSMutableDictionary alloc] init];
+        for(Screen *s in newScreens) {
+            [screens setObject:s forKey:s.name];
+        }
     }
     
     return self;
+}
+
+- (void) addScreen: (Screen *) screen
+{
+    [screens setObject: screen forKey: screen.name];
+}
+
+- (void) removeScreen: (Screen *) screen
+{
+    [self removeScreenNamed: screen.name];
+}
+
+- (void) removeScreenNamed: (NSString *) name
+{
+    [screens removeObjectForKey: name];
+}
+
+- (NSArray *) getScreens
+{
+    // calling this, don't forget to retain!
+    return [screens allValues];
 }
 
 - (void) dealloc
 {
     [screens release];
-    [links release];
     [super dealloc];
 }
 
