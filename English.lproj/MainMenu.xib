@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1016"/>
+			<integer value="456"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2034,19 +2034,7 @@
 				<string key="NSClassName">ServerViewController</string>
 			</object>
 			<object class="NSArrayController" id="616948586">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>aliases.@</string>
-					<string>aliases</string>
-					<string>aliases.values</string>
-					<string>aliases.@values</string>
-					<string>@values.aliases</string>
-					<string>name</string>
-					<string>@count.aliases</string>
-					<string>aliases.@count</string>
-				</object>
 				<string key="NSObjectClassName">Screen</string>
-				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 				<bool key="NSAvoidsEmptySelection">YES</bool>
 				<bool key="NSPreservesSelection">YES</bool>
@@ -2773,6 +2761,22 @@
 						<reference key="destination" ref="843573587"/>
 					</object>
 					<int key="connectionID">1015</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">screenTable</string>
+						<reference key="source" ref="74427407"/>
+						<reference key="destination" ref="1015987971"/>
+					</object>
+					<int key="connectionID">1017</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1015987971"/>
+						<reference key="destination" ref="74427407"/>
+					</object>
+					<int key="connectionID">1026</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4501,7 +4505,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{244, 478}, {338, 164}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{52, 320}, {611, 390}}</string>
+					<string>{{36, 389}, {611, 390}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{13, 595}, {616, 0}}</string>
@@ -4610,7 +4614,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">1016</int>
+			<int key="maxID">1026</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4665,6 +4669,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ServerViewController</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">screenTable</string>
+						<string key="NS.object.0">NSTableView</string>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">ServerViewController.h</string>

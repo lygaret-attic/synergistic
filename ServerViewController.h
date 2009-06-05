@@ -12,9 +12,10 @@
 
 @interface ServerViewController : NSObject 
 {
+    IBOutlet NSTableView *screenTable;
     Configuration *configuration;
 }
 
-@property(readonly) Configuration *configuration;
+@property(retain) Configuration *configuration;
 
 @end

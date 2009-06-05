@@ -11,14 +11,18 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DC1EC0750E835A0900BBD932 /* CVInit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1EC0740E835A0900BBD932 /* CVInit.m */; };
+		DC1EC0E60E835ED900BBD932 /* UIGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1EC0E50E835ED900BBD932 /* UIGlobals.m */; };
 		DC2C7A080E81D46B000FA7F8 /* ScreenGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C7A070E81D46B000FA7F8 /* ScreenGlobals.m */; };
 		DC2C7A1F0E820825000FA7F8 /* ConfigurationTempBootstrapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C7A1E0E820825000FA7F8 /* ConfigurationTempBootstrapping.m */; };
-		DC2C7A370E820E9A000FA7F8 /* CVLayerGen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C7A360E820E9A000FA7F8 /* CVLayerGen.m */; };
-		DC2C7BC60E828B0D000FA7F8 /* screen.icns in Resources */ = {isa = PBXBuildFile; fileRef = DC2C7BC50E828B0D000FA7F8 /* screen.icns */; };
+		DC3908F00E8AADF40035E41C /* screen.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DC3908EF0E8AADF40035E41C /* screen.tiff */; };
+		DC3908F30E8AAE100035E41C /* screen_box.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DC3908F20E8AAE100035E41C /* screen_box.tiff */; };
+		DC3908F80E8AAEF60035E41C /* SelectableLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3908F70E8AAEF60035E41C /* SelectableLayer.m */; };
+		DC3909A60E8AB7B10035E41C /* ScreenLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3909A50E8AB7B10035E41C /* ScreenLayer.m */; };
+		DC3909B40E8ABA250035E41C /* BoxLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3909B30E8ABA250035E41C /* BoxLayer.m */; };
 		DC69A6320E7AF53300660B7D /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6310E7AF53300660B7D /* Screen.m */; };
 		DC69A6350E7AF7C600660B7D /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6340E7AF7C600660B7D /* Configuration.m */; };
 		DC69A6870E7AFCB700660B7D /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC69A6860E7AFCB700660B7D /* ServerViewController.m */; };
-		DCAFD2040E7E0C7E00316004 /* screen_box.icns in Resources */ = {isa = PBXBuildFile; fileRef = DCAFD2030E7E0C7E00316004 /* screen_box.icns */; };
 		DCAFD2410E7E1A8A00316004 /* TheoCacaoLicense.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCAFD2400E7E1A8A00316004 /* TheoCacaoLicense.txt */; };
 		DCB66CE90E7889C800C2A690 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = DCB66CE80E7889C800C2A690 /* COPYING */; };
 		DCB66D300E788B6800C2A690 /* ViewToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB66D2F0E788B6800C2A690 /* ViewToolbarItem.m */; };
@@ -59,17 +63,25 @@
 		32CA4F630368D1EE00C91783 /* Synergistic_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synergistic_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Synergistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synergistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1EC0740E835A0900BBD932 /* CVInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVInit.m; sourceTree = "<group>"; };
+		DC1EC0CE0E835E1200BBD932 /* UIGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGlobals.h; sourceTree = "<group>"; };
+		DC1EC0E50E835ED900BBD932 /* UIGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGlobals.m; sourceTree = "<group>"; };
 		DC2C7A070E81D46B000FA7F8 /* ScreenGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenGlobals.m; sourceTree = "<group>"; };
 		DC2C7A1E0E820825000FA7F8 /* ConfigurationTempBootstrapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationTempBootstrapping.m; sourceTree = "<group>"; };
-		DC2C7A360E820E9A000FA7F8 /* CVLayerGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVLayerGen.m; sourceTree = "<group>"; };
-		DC2C7BC50E828B0D000FA7F8 /* screen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen.icns; sourceTree = "<group>"; };
+		DC3908EF0E8AADF40035E41C /* screen.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = screen.tiff; sourceTree = "<group>"; };
+		DC3908F20E8AAE100035E41C /* screen_box.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = screen_box.tiff; sourceTree = "<group>"; };
+		DC3908F60E8AAEF60035E41C /* SelectableLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableLayer.h; sourceTree = "<group>"; };
+		DC3908F70E8AAEF60035E41C /* SelectableLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableLayer.m; sourceTree = "<group>"; };
+		DC3909A40E8AB7B10035E41C /* ScreenLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenLayer.h; sourceTree = "<group>"; };
+		DC3909A50E8AB7B10035E41C /* ScreenLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenLayer.m; sourceTree = "<group>"; };
+		DC3909B20E8ABA250035E41C /* BoxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxLayer.h; sourceTree = "<group>"; };
+		DC3909B30E8ABA250035E41C /* BoxLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxLayer.m; sourceTree = "<group>"; };
 		DC69A6300E7AF53300660B7D /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
 		DC69A6310E7AF53300660B7D /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screen.m; sourceTree = "<group>"; };
 		DC69A6330E7AF7C600660B7D /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		DC69A6340E7AF7C600660B7D /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		DC69A6850E7AFCB700660B7D /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
 		DC69A6860E7AFCB700660B7D /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
-		DCAFD2030E7E0C7E00316004 /* screen_box.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen_box.icns; sourceTree = "<group>"; };
 		DCAFD2400E7E1A8A00316004 /* TheoCacaoLicense.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheoCacaoLicense.txt; sourceTree = "<group>"; };
 		DCB66CE80E7889C800C2A690 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		DCB66D2E0E788B6800C2A690 /* ViewToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToolbarItem.h; sourceTree = "<group>"; };
@@ -168,8 +180,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DC2C7BC50E828B0D000FA7F8 /* screen.icns */,
-				DCAFD2030E7E0C7E00316004 /* screen_box.icns */,
+				DC3908F20E8AAE100035E41C /* screen_box.tiff */,
+				DC3908EF0E8AADF40035E41C /* screen.tiff */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -198,6 +210,19 @@
 				DC69A6860E7AFCB700660B7D /* ServerViewController.m */,
 			);
 			name = "Tabbed UI";
+			sourceTree = "<group>";
+		};
+		DC3909A70E8AB7BA0035E41C /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				DC3908F60E8AAEF60035E41C /* SelectableLayer.h */,
+				DC3908F70E8AAEF60035E41C /* SelectableLayer.m */,
+				DC3909A40E8AB7B10035E41C /* ScreenLayer.h */,
+				DC3909A50E8AB7B10035E41C /* ScreenLayer.m */,
+				DC3909B20E8ABA250035E41C /* BoxLayer.h */,
+				DC3909B30E8ABA250035E41C /* BoxLayer.m */,
+			);
+			name = Layers;
 			sourceTree = "<group>";
 		};
 		DC69A62F0E7AF52200660B7D /* Models */ = {
@@ -239,9 +264,10 @@
 		DCF0AAF80E7CBBDB009CD224 /* Configuration View */ = {
 			isa = PBXGroup;
 			children = (
+				DC3909A70E8AB7BA0035E41C /* Layers */,
 				DCF0AAF90E7CBBED009CD224 /* ConfigView.h */,
 				DCF0AAFA0E7CBBED009CD224 /* ConfigView.m */,
-				DC2C7A360E820E9A000FA7F8 /* CVLayerGen.m */,
+				DC1EC0740E835A0900BBD932 /* CVInit.m */,
 			);
 			name = "Configuration View";
 			sourceTree = "<group>";
@@ -258,6 +284,8 @@
 		DCFDBC880E7738EA00A94BAC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DC1EC0CE0E835E1200BBD932 /* UIGlobals.h */,
+				DC1EC0E50E835ED900BBD932 /* UIGlobals.m */,
 				DC2C7A320E820DC5000FA7F8 /* Tabbed UI */,
 				DCF0AAF80E7CBBDB009CD224 /* Configuration View */,
 			);
@@ -320,9 +348,9 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				DCB66CE90E7889C800C2A690 /* COPYING in Resources */,
-				DCAFD2040E7E0C7E00316004 /* screen_box.icns in Resources */,
 				DCAFD2410E7E1A8A00316004 /* TheoCacaoLicense.txt in Resources */,
-				DC2C7BC60E828B0D000FA7F8 /* screen.icns in Resources */,
+				DC3908F00E8AADF40035E41C /* screen.tiff in Resources */,
+				DC3908F30E8AAE100035E41C /* screen_box.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +375,11 @@
 				DCF0AB890E7D74CA009CD224 /* NSImage-Extras.m in Sources */,
 				DC2C7A080E81D46B000FA7F8 /* ScreenGlobals.m in Sources */,
 				DC2C7A1F0E820825000FA7F8 /* ConfigurationTempBootstrapping.m in Sources */,
-				DC2C7A370E820E9A000FA7F8 /* CVLayerGen.m in Sources */,
+				DC1EC0750E835A0900BBD932 /* CVInit.m in Sources */,
+				DC1EC0E60E835ED900BBD932 /* UIGlobals.m in Sources */,
+				DC3908F80E8AAEF60035E41C /* SelectableLayer.m in Sources */,
+				DC3909A60E8AB7B10035E41C /* ScreenLayer.m in Sources */,
+				DC3909B40E8ABA250035E41C /* BoxLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

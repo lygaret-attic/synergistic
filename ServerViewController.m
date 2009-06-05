@@ -6,9 +6,9 @@
 //  Copyright 2008 __MyCompanyName__. All rights reserved.
 //
 
+#import "UIGlobals.h"
 #import "ServerViewController.h"
 #import "Configuration.h"
-#import "Screen.h"
 
 @implementation ServerViewController
 @synthesize configuration;
@@ -16,20 +16,30 @@
 - (id) init
 {
     if (self = [super init]) {
-        configuration = [Configuration sampleConfiguration];
+        configuration = [[Configuration sampleConfiguration] retain];    
     }
     
     return self;
-}
-
-- (void) awakeFromNib
-{
 }
 
 - (void) dealloc
 {
     [configuration release];
     [super dealloc];
+}
+
+- (void) awakeFromNib
+{
+    [screenTable setDelegate: self];
+    [screenTable setDataSource: self];
+    [screenTable registerForDraggedTypes: [NSArray arrayWithObject: ScreenDragType]];
+}
+
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject: rowIndexes];
+    [pboard declareTypes: [NSArray arrayWithObject: ScreenDragType] owner: self];
+    [pboard setData: data forType: ScreenDragType];
+    return YES;
 }
 
 @end

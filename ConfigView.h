@@ -8,32 +8,27 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/QuartzCore.h>
+#import "SelectableLayer.h"
+#import "NSImage-Extras.h"
+#import "Configuration.h"
+#import "Screen.h"
 
-#import "NSImage-Extras.h";
-#import "Screen.h";
+#define IMAGE_HEIGHT 32
+#define IMAGE_WIDTH 32
+#define TEXT_OFFSET 18
 
 @interface ConfigView : NSView 
 {
-    NSGradient *backgroundGradient;
-    CGImageRef screenImage;
-    CGImageRef boxImage;
+    Configuration *config;
     
-    CALayer *textLayer;
+@private
+    SelectableLayer *selectedLayer;
+    NSGradient *backgroundGradient;
 }
-
-@property(retain) NSGradient *backgroundGradient;
-
-- (void) initBackgroundGradient;
-- (void) addFirstScreen: (Screen *) screen;
-- (void) addScreen: (Screen *) screen toThe: (LinkDirection) direction Of: (NSString *) layerName;
-- (void) addBoxToThe: (LinkDirection) direction Of: (NSString *) layerName;
 
 @end
 
-// CVLayerGen.m
-@interface ConfigView (LayerGen)
-    
-- (CALayer *) makeLayerForScreen: (Screen *) screen;
-- (CALayer *) boxLayer;
-
+// CVInit.m
+@interface ConfigView (InitMethods)
+-(void) initBackgroundGradient;
 @end

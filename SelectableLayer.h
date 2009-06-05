@@ -1,5 +1,5 @@
 //
-//  ScreenLayer.h
+//  SelectableLayer.h
 //  Synergistic
 //
 //  Created by siteworx on 9/24/08.
@@ -8,13 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/QuartzCore.h>
-#import "Screen.h"
-#import "SelectableLayer.h"
 
-@interface ScreenLayer : SelectableLayer {
-    Screen *backingScreen;
+@interface SelectableLayer : CALayer {
+    BOOL selected;
 }
 
-- (id) initWithScreen: (Screen *) screen;
+@property(assign) BOOL selected;
 
 @end

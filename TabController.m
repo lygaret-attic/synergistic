@@ -71,7 +71,7 @@ const int STATUSBAR_HEIGHT = 20;
     [currentView setFrame: newViewFrame];
     [currentView setNeedsDisplay: YES];
     
-    [window setFrame: newWindowFrame display: YES animate: animate];        
+    [window setFrame: newWindowFrame display: YES animate: NO];        
 }
 
 @end
